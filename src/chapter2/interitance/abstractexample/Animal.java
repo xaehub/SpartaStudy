@@ -1,4 +1,12 @@
 package chapter2.interitance.abstractexample;
 
-public class Animal {
+abstract class Animal {
+
+    public String name;
+
+    abstract void eat();
+
+    public void sleep() {
+        System.out.println("쿨쿨zz..");
+    }
 }

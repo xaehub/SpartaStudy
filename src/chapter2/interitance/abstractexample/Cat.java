@@ -1,4 +1,4 @@
-import chapter2.interfaceexample.v1.Animal;
+package chapter2.interitance.abstractexample;
 
 public class Cat extends Animal {
     @Override
