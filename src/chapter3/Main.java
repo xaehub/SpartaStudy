@@ -1,14 +1,18 @@
 package chapter3;
 
 import java.util.Arrays;
-import java.util.stream.Stream;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
-        String[] arr = {"김태정", "신성록", "박수진"};
+        List<String> names = Arrays.asList("김태정", "이준호", "박수진");
 
-        // 배열을 스트림으로 변환
-        Stream<String> stream = Arrays.stream(arr);
-        stream.forEach(System.out::println);
+        // "김"으로 시작하는 이름만 필터링
+        List<String> result = names.stream()
+                .filter(name -> name.startsWith("김"))
+                .collect(Collectors.toList());
+
+        System.out.println(result);
     }
 }
